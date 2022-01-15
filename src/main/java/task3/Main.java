@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String a,b,c;
-        int res =0;
+        String a, b, c;
+        int res = 0;
         String[] numbers = new String[3];
         int[] nums = new int[3];
         System.out.println("Введіть три цифри:");
@@ -25,16 +25,15 @@ public class Main {
             if (numbers[i].matches("\\d")) {
 
                 int number = Integer.valueOf(numbers[i]);
-                nums[i]=number;
-            }
-            else{
+                nums[i] = number;
+            } else {
                 System.out.println("Одне з введених значень не було числом.");
-                nums[i]=1;
+                nums[i] = 1;
             }
         }
 
-        for (int i=0;i<nums.length;i++){
-            res = nums[0]*100+nums[1]*10+nums[2];
+        for (int i = 0; i < nums.length; i++) {
+            res = nums[0] * 100 + nums[1] * 10 + nums[2];
         }
         System.out.println(res);
     }
